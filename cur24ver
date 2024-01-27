@@ -1,0 +1,13 @@
+"Registrar los clientes (que no permita registrar duplicado).  en python"
+clientes = {}
+
+def registrar_cliente(nombre, edad):
+    if edad not in clientes:
+        clientes[edad] = nombre
+        print(f'Cliente {nombre} registrado con éxito.')
+    else:
+        print(f'Error: La edad {edad} ya está registrada.')
+
+# Prueba de la función de registro
+registrar_cliente('Juan Pérez', 30)
+registrar_cliente('Juan Pérez', 30)
